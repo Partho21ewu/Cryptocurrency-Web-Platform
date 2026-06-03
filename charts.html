@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto Trading Charts</title>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <link rel="stylesheet" href="des.css">
+</head>
+<body>
+  <h1>Cryptos Trading Charts</h1>
+  <div id="container" style="height: 500px;"></div>
+  <script>
+    Highcharts.chart('container', {
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: 'BTC/USD Trading Chart'
+      },
+      xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      },
+      yAxis: {
+        title: {
+          text: 'Price (USD)'
+        }
+      },
+      series: [{
+  name: 'BTC/USD',
+  data: [10000, 12000, 8000, 9000, 11000, 13000, 14000, 12000, 10000, 9000, 11000, 12000]
+},
+{
+  name: 'ETH/USD',
+  data: [500, 600, 400, 450, 550, 650, 700, 600, 500, 450, 550, 600]
+},
+{
+  name: 'LTC/USD',
+  data: [100, 120, 80, 90, 110, 130, 140, 120, 100, 90, 110, 120]
+},
+{
+  name: 'XRP/USD',
+  data: [0.2, 0.3, 0.25, 0.35, 0.4, 0.5, 0.6, 0.4, 0.35, 0.45, 0.5, 0.55]
+},
+{
+  name: 'ADA/USD',
+  data: [0.1, 0.12, 0.15, 0.2, 0.3, 0.4, 0.5, 0.4, 0.3, 0.25, 0.3, 0.35]
+},
+{
+  name: 'BNB/USD',
+  data: [10, 12, 15, 20, 25, 30, 35, 30, 25, 20, 22, 24]
+},
+{
+  name: 'DOGE/USD',
+  data: [0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.007, 0.006, 0.005, 0.004]
+},
+{
+  name: 'LINK/USD',
+  data: [20, 22, 24, 25, 30, 35, 40, 35, 30, 25, 27, 29]
+},
+{
+  name: 'XLM/USD',
+  data: [0.05, 0.06, 0.07, 0.08, 0.1, 0.12, 0.14, 0.12, 0.1, 0.09, 0.1, 0.11]
+}
+]
+    });
+  </script>
+</body>
+</html>

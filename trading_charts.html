@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trading Charts</title>
+	<!-- Load Highcharts library -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/data.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<link rel="stylesheet" href="trading_chart.css">
+</head>
+<body>
+	<h1>Trading Charts</h1>
+	<?php include('get_data.php'); ?>
+	<!-- Create a container for the chart -->
+	<div id="container"></div>
+	<!-- Create a script to render the chart using Highcharts -->
+	<script>
+		Highcharts.chart('container', {
+			chart: {
+				type: 'line'
+			},
+			title: {
+				text: 'Historical Price Data for <?php echo $cryptocurrency; ?>'
+			},
+			subtitle: {
+				text: 'Source: <?php echo $source; ?>'
+			},
+			xAxis: {
+				type: 'datetime',
+				title: {
+					text: 'Date'
+				}
+			},
+			yAxis: {
+				title: {
+					text: 'Price (USD)'
+				}
+			},
+			series: [{
+				name: '<?php echo $cryptocurrency; ?>',
+				data: <?php echo $data; ?>
+			}]
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Crypto Order Form</title>
+</head>
+
+<body>
+	<h1>Cryptos Order Form</h1>
+	<form method="post" action="process_order.php">
+		<label for="crypto">Cryptocurrency:</label>
+		<select id="crypto" name="crypto">
+			<option value="BTC">Bitcoin</option>
+			<option value="ETH">Ethereum</option>
+			<option value="LTC">Litecoin</option>
+			<option value="NMC">Namecoin</option>
+			<option value="PPC">Peercoin</option>
+			<option value="USDC">USDCcoin</option>
+			<option value="XRP">Ripple</option>
+			<option value="NXT">Nxt</option>
+			<option value="DOGE">Dogecoin</option>
+			<option value="GRC">Gridcoin</option>
+			<option value="XMP">Primecoin</option>
+			<option value="AUR">Auroracoin</option>
+			<option value="DASH">Dash</option>
+			<option value="NEO">Neo</option>
+			<option value="MZC">Mazacoin</option>
+			<option value="XMR">Monero</option>
+			<option value="TIT">Titcoin</option>
+			<option value="XVG">Verge</option>
+			<option value="XLM">Stellar</option>
+			<option value="VTC">Vertcoin</option>
+			<option value="ETC">Ethereum Classsic</option>
+			<option value="USDT">Tether</option>
+			<option value="FIRO">Firo</option>
+			<option value="ZEC">Zcash</option>
+			<option value="BCH">Bitcoin Cash</option>
+			<option value="TRX">TRON</option>
+			<option value="CKB">Nervos Network</option>
+			<option value="DESO">DeSo</option>
+			<option value="SAFEMOON">SafeMoon</option>
+			<option value="DOT">Polkadot</option>
+		</select><br><br>
+
+		<label for="quantity">Quantity:</label>
+		<input type="number" id="quantity" name="quantity" min="0"><br><br>
+
+		<label for="price">Price:</label>
+		<input type="number" id="price" name="price" min="0"><br><br>
+
+		<label for="order_type">Order Type:</label>
+		<select id="order_type" name="order_type">
+			<option value="buy">Buy</option>
+			<option value="sell">Sell</option>
+		</select><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+
+</html>

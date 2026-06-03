@@ -1,0 +1,15 @@
+.chart-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.chart {
+  height: 500px;
+}
+
+@media screen and (max-width: 767px) {
+  .chart-container {
+    width: 100%;
+  }
+}
